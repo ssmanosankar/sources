@@ -1,0 +1,42 @@
+body{
+    background: url('background.jpg');
+    margin: 0%;
+    padding: 0%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.col-md-4{
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+.input-group{
+    margin-bottom: 10px;
+    color: white;
+}
+.input-group-addon{
+    background: transparent;
+    border-radius: 0px;
+    border: 0px;
+    border-bottom: 1px solid gray;
+    color: white;
+}
+.form-control{
+    background: transparent;
+    border: 0px;
+    border-bottom: 1px solid white;
+}
+#s_button{
+    border: none;
+    background: red;
+    position: relative;
+    left: 150px;
+}
+.glyphicon-user{
+    border-bottom: 1px solid white;
+}
+input{
+    color: white;
+}
