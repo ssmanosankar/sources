@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hotel | Home</title>
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+     <!-- Bootstrap 4 CDN -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/index_style.css">
+    <!-- Script files -->
+    <script src="js/menu_bar.js"></script>
+</head>
+<body>
+    <div class="parent_one">
+
+        <div class="header">
+            <p id="main_text">Amritham</p>
+        </div>
+
+        <!-- Menus -->
+        <div class="menu_button"  id="menu_dashboard">
+            <img src="icons/dashboard.png" alt="">
+            <p>Dashboard</p>
+        </div>
+        <div class="menu_button" id="menu_stocks">
+            <img src="icons/stock.png" alt="">
+            <p>Stocks</p>
+        </div>
+        <div class="menu_button" id="menu_menu">
+            <img src="icons/menu.png" alt="">
+            <p>Menu</p>
+        </div>
+        <div class="menu_button" id="menu_attender_details">
+            <img src="icons/users.png" alt="">
+            <p>Attender details</p>
+        </div>
+        <div class="menu_button" id="menu_report">
+            <img src="icons/report.png" alt="">
+            <p>Report</p>
+        </div>
+        <div class="menu_button" id="menu_settings">
+            <img src="icons/settings.png" alt="">
+            <p>Settings</p>
+        </div>
+    </div>
+    <div class="parent_two">
+        <iframe src="dashboard/dashboard.html" id="if1" width="100%" height="100%" frameborder="0"></iframe>
+        <iframe src="stocks/stocks.html" id="if2" width="100%" height="100%" frameborder="0"></iframe>
+        <iframe src="menu/menu.html" id="if3" width="100%" height="100%" frameborder="0"></iframe>
+        <iframe src="attenders_details/attenders.html" id="if4" width="100%" height="100%" frameborder="0"></iframe>
+        <iframe src="report/report.html" id="if5" width="100%" height="100%" frameborder="0"></iframe>
+        <iframe src="settings/settings.html"   id="if6" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+</body>
+</html>

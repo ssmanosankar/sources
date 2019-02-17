@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Script files -->
+    <script src="js/main_script.js"></script>
+    <script src="js/date&time.js"></script>
+    <script src="JS/cart_populate.js"></script>
+    
+</head>
+<body>
+        <!-- Top Search Icon -->
+           <!-- Top Search Icon -->
+           
+           <div class="col-lg-12 body">
+                <div class="top" style="height: 34px;">
+                        <div class="content">
+                            <img src="ICONS/SEARCH.PNG" alt="" id="search_icon">
+                            <input type="search" name="" id="search_bar" placeholder="Search invoice, Bill number" style="width: 902px;height: 22px;margin-top: 4px;">
+                            </div>
+                        <div class="user">
+                            <select name="position" id="manager">
+                                <option value="manager">Manager</option>
+                            </select>
+                        </div>                      
+                        </div>
+                <div class="tool_bar"> 
+                    <img src="ICONS/BURGER.PNG" alt="" id="menu_icon">
+                    <p id="text">Running Order</p>      
+                </div> 
+                <div id="cart" class="table" style="margin-bottom: 3‒;border-bottom: 1px solid rgb(202, 13, 13);margin-bottom: 2px;height: 167px;">
+    
+                    <!-- Table1 -->
+                    <!-- <div class="Table1"> 
+                            <img src="ICONS/CHAIR.PNG" alt="" id="chair_icon" style="margin-left: 30px;">  
+                             <p id="text1">Table1</p>
+                             <p id="text2" >@Ramakrishnan</p>
+                             <img src="ICONS/meal.png" alt="" id="cup_icon" >
+                             <p id="text3" >7 items</p>                 
+                             <p id="text4" >$500.00</p>
+                             <a href="" id="text5" ><u style="color:white;font-size:125%;">Bill Print</u></a>
+                            </div>  
+                             -->
+    </div>
+    <!-- Bill Modal -->
+    <div class="modal fade" id="bill" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+               <!-- Header -->
+                <div class="modal-header">
+                  <h4 id="hotel_name">Amirtham Family Hotel</h4>
+                </div>
+              <!-- Modal Body -->
+                <div class="modal-body">
+                
+                    <div class="each_details_orders">
+                            
+                                    <div class="table_number">
+                                        <div ><p id="t_name">Table:</p></div>
+                                        <div><p id="t_value">03</p></div>
+                                    </div>
+                                    <div class="time_details">
+                                        <div><p id="ti_name">Time:</p></div>
+                                        <div><p id="ti_value">12:04:02pm</p></div>
+                                    </div>
+                                   <div class="date_details">
+                                        <div><p id="d_name">Date:</p></div>
+                                        <div><p id="d_value">14/02/2019</p></div>
+                                     </div>
+                            
+                                            <div class="bill_details">
+                                                <div><p id="b_name">Bill No:</p></div>
+                                                <div><p id="b_value">1234</p></div>
+                                            </div>
+                                            <div class="attender_details">
+                                                <div><p id="a_name">Attender:</p></div>
+                                                <div><p id="a_value">Marimuthu</p></div>
+                                            </div>
+                                            <div class="item_details">
+                                                <div><p id="i_name">Item:</p></div>
+                                                <div><p id="i_value">07</p></div>
+                                            </div>
+                                        
+                            
+                    </div>
+
+
+
+                    <div class="d3">
+                            <table id="bill">
+                           <thead>
+                               <tr><th>SNo</th><th>Item</th><th>Sub Total</th><th>Quantity</th><th>Price</th></tr>
+                           </thead>
+                           <tbody>
+                               <tr><td>01</td><td>Dosa</td><td>10</td><td>5</td><td>50</td></tr>
+                               <tr><td>02</td><td>Idli</td><td>5</td><td>5</td><td>25</td></tr>
+                               <tr><td>03</td><td>Pongal</td><td>30</td><td>2</td><td>60</td></tr>
+                               <tr><td>04</td><td>Chicken Briyani</td><td>100</td><td>1</td><td>100</td></tr>
+                               <tr><td>05</td><td>Mutton Briyani</td><td>150</td><td>1</td><td>150</td></tr>
+                               <tr><td>01</td><td>Dosa</td><td>10</td><td>5</td><td>50</td></tr>
+                               <tr><td>02</td><td>Idli</td><td>5</td><td>5</td><td>25</td></tr>
+                               <tr><td>03</td><td>Pongal</td><td>30</td><td>2</td><td>60</td></tr>
+                               <tr><td>04</td><td>Chicken Briyani</td><td>100</td><td>1</td><td>100</td></tr>
+                               <tr><td>05</td><td>Mutton Briyani</td><td>150</td><td>1</td><td>150</td></tr>
+                               <tr><td>01</td><td>Dosa</td><td>10</td><td>5</td><td>50</td></tr>
+                               <tr><td>02</td><td>Idli</td><td>5</td><td>5</td><td>25</td></tr>
+                               <tr><td>03</td><td>Pongal</td><td>30</td><td>2</td><td>60</td></tr>
+                               <tr><td>04</td><td>Chicken Briyani</td><td>100</td><td>1</td><td>100</td></tr>
+                               <tr><td>05</td><td>Mutton Briyani</td><td>150</td><td>1</td><td>150</td></tr>
+                           </tbody>
+                            </table>
+                            </div>
+
+                            <div class="bill_total">
+                                    <div class="amt"><div><p>Total:</p></div><div><p>450</p></div></div>
+                                    <div class="gst"><div><p>GST:</p></div><div><p>45</p></div></div>
+                                    <div class="gt"><div><p>Grand Total:</p></div><div><p>495</p></div></div>
+                                </div>
+
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn btn-primary" data-dismiss="modal">OK</button>
+                  <button type="button" class="btn btn btn-success" data-dismiss="modal">Save</button>
+                  <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+                 
+
+                        <div class="second">
+                            <div class="attender_status">
+                                    <div class="col-lg-12" id="dd"><p id="date"></p><p id="day" style="margin-left:4px;"></p>
+                            </div>
+                                    <div class="col-lg-12 body">    
+                                                          <table id="attenders_table" >
+                                                              <thead><tr>
+                                                                <th>Time</th>
+                                                                <th>Attender</th>
+                                                                <th>Table</th>
+                                                                <th>Bill Number</th>
+                                                                <th>Item</th>
+                                                                <th>Price</th>
+                                                              </tr></thead>
+                                                              <tbody>
+                                                                  <tr><td>01</td>
+                                                                <td>Marimuthu</td>
+                                                                <td>Table1</td>
+                                                                <td>am1234</td>
+                                                                <td>Drinks</td>
+                                                                <td>200</td>
+                                                                </tr>
+                                                                <tr><td>01</td>
+                                                                    <td>Marimuthu</td>
+                                                                    <td>Table1</td>
+                                                                    <td>am1234</td>
+                                                                    <td>Drinks</td>
+                                                                    <td>200</td>
+                                                                    </tr>
+                                                                    <tr><td>01</td>
+                                                                        <td>Marimuthu</td>
+                                                                        <td>Table1</td>
+                                                                        <td>am1234</td>
+                                                                        <td>Drinks</td>
+                                                                        <td>200</td>
+                                                                        </tr>
+                                                              </tbody>
+                                                          </table></div>
+                            </div>
+                            <div class="item_overview">
+                               <div class="col-lg-12 body"><center><p id="item_overview_top">Items Over View</p></center></div>  
+                                        <div class="col-lg-12 body">
+                                               <center>  <table id="item_overview_table" >
+                                                      <tr>
+                                                        <th>Items</th>
+                                                        <th>Quantity</th>
+                                                        <th>Price</th>
+                                                      </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Idly</td>
+                                                            <td>100</td>
+                                                            <td>500</td>
+                                                        </tr>
+                                                        <tr>
+                                                                <td>Idly</td>
+                                                                <td>100</td>
+                                                                <td>500</td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td>Idly</td>
+                                                                    <td>100</td>
+                                                                    <td>500</td>
+                                                                </tr>
+                                                                <tr>
+                                                                        <td>Idly</td>
+                                                                        <td>100</td>
+                                                                        <td>500</td>
+                                                                    </tr>
+                                                    </tbody> </center> 
+                                                  </table></div>
+                        </div>
+                </div>    
+    </body>
+    </html>

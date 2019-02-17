@@ -1,0 +1,65 @@
+body{
+    display: flex;
+    margin: 0%;
+    padding: 0%;
+}
+div.parent_one{
+    width: 22vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #cc3300 40%, #ff6600 70%);
+    transition: 0.3s;
+    overflow: hidden;
+    white-space: nowrap;
+}
+div.parent_two{
+    width: 100%;
+    height: auto;
+}
+div.closed{
+    width: 3vw;
+}
+#main_icon{
+    margin-left: 2px;
+    margin-top: 5px;
+    height: 35px;
+    width: 35px;
+}
+#main_text{
+
+    color: white;
+    margin: 8px;
+    margin-left: 55px;
+    font-size: 22px;
+} 
+.parent_one .header{
+    display: flex;
+}
+/* Menu Button */
+.parent_one .menu_button{
+    display: flex;
+    margin-top:15px;
+    padding-top: 8px;
+    padding-left: 5px;
+    height: 40px;
+    cursor: pointer;
+}
+.parent_one .menu_button p{
+    margin-top: 0px;
+    color: white;
+    margin-left: 20px;
+    font-size: 14px;
+}
+.parent_one .menu_button img{
+    width: 20px;
+    height: 20px;
+}
+/* Menu selected class */
+.selected{
+    border-left: 2px solid blue;
+    background: rgb(0,0,0,.1);
+}
+/*---------------- Parent two ---------------*/
+.parent_two{
+    background: #F0EEEF;
+    overflow-y: hidden;
+}

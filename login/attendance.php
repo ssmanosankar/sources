@@ -1,39 +1,54 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+ <?php
+ $servername = "localhost";
+ $username = "root";
+ $password = "";
 
-    $conn = new PDO("mysql:host=$servername;dbname=login", $username, $password);
+ $conn = new PDO("mysql:host=$servername;dbname=login", $username, $password);
 
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    $st=$conn->prepare("SELECT count(name) FROM members");
-    $st->execute();
+ $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //$conn = mysqli_connect("localhost","root","","login");
+ $st=$conn->prepare("SELECT count(name) FROM members");
+ $st->execute();
   
-   $count=$st->fetch();
+ $count=$st->fetch();
+ $t=$count[0]; 
+ echo $t;
+ echo "<br>";
     
-    // echo $count[0];
-    $count = $count[0];
-    if(isset($_POST['name_1'])){
-        echo 1;
-    }
-    for($i=1;$i<=$count;$i++)
-    {
-    $name=$_POST['name_'.$i];
-    $date=$_POST['date_'.$i];
-    $status=$_POST['status_'.$i];
-    $reason=$_POST['reason_'.$i];
-    
-    $stmt=$conn->prepare("INSERT INTO attendance (name,date,status,reason) VALUES($name,$date,$status,$reason)");
-    if($stmt->excute())
-    {
-        echo "success";
-    }else
-    {
-        echo "error";
-    }
-    }
+    /*$name=$_POST['name'];
+    $var=serialize($name);
+    $sql=$conn->prepare("INSERT INTO att (name) VALUES('$var')");
+    $sql->excute();
+    */
+    $connn=new mysqli("localhost","root","","login");
 
-$conn = null;
+ $name=$_POST['name'];
+ $date=$_POST['date'];   
+ $status=$_POST['status'];    
+ $reason=$_POST['reason'];
 
-?>
+ if(is_array($name) && is_array($date) && is_array($status) && is_array($reason)){
+        for($i=1; $i<=$t; $i++)
+{
+    $fname =$name[$i];
+    $fdate=$date[$i];
+    $fstatus=$status[$i];
+    $freason=$reason[$i];
+$sql="INSERT INTO attendance (name,date,status,reason) VALUES('$fname','$fdate','$fstatus','$freason')";
+if(mysqli_query($connn,$sql))
+echo "success";
+else
+echo "Failed";
+}}
+for($i=1; $i<=$t; $i++){       
+ echo $name[$i] ;
+ echo" ";
+ echo $date[$i] ;
+ echo" ";
+ echo $status[$i] ;
+ echo" ";
+ echo $reason[$i] ;
+ echo "<br>";}
+ 
+ $conn=null;
+ ?>

@@ -1,6 +1,4 @@
 <?php
-$from=$_POST['date1'];
-$to=$_POST['date2'];
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -9,12 +7,14 @@ $password = "";
 
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $stmt = $conn->prepare("SELECT * FROM attendance where date between '$from' and '$to'");
+$stmt = $conn->prepare("SELECT * FROM attendance");
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $data_set = $stmt->fetchAll();
 
-echo json_encode($data_set);
+
+print json_encode($data_set);
+
 
 
 $conn = null;

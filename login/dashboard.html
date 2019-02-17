@@ -4,6 +4,7 @@
   <title>Dashboard</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -24,7 +25,7 @@
     /* Set black background color, white text and some padding */
     
     /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 600px) {
+    @media screen and (width: 400px) {
       .sidenav {
         height: auto;
         padding: 15px;
@@ -35,6 +36,8 @@
       {
         margin-left: 40px;
       }
+     
+      
     }
   </style>
 </head>
@@ -43,40 +46,108 @@
 
 <div class="container-fluid">
   <div class="row content">
-    <div class="col-sm-3 sidenav">
-      <h4>TENTRECEN</h4>
+    <div class="col-sm-2 sidenav">
+      <img src="aname.png" height="60" width="160" alt="Logo">
+
       <ul class="nav nav-pills nav-stacked">
-        <li id="t1" class="active"><a  >Members</a></li>
-        <li id="t2"><a >Attendance</a></li>
-        <li id="t3"><a >Tasks</a></li>
+        <li id="t1" class="active"><a><div><img src="member.png" width="20"height="20">Members</div></a></li>
+        <li id="t2"><a><div><img src="i1.png" width="20"height="20">Attendance</div></a></li>
+        <li id="t3"><a><div><img src="clipboard.png" width="20"height="20">Tasks</div></a></li>
       </ul><br>
       
     </div>
 
-    
                   <!-- Third Division -->
-                  <div id="tt3" class="col-sm-9">
+                  <div id="tt3">
                              
                       <h4>Hello</h4>
-        
-                         </div>
-        
+                  </div>
         
 
     <!-- Second Division -->
     <div id="tt2">
-            <div class="table-responsive">  
-                <h3>Attendance Details</h3>  
-                <form id="sort" method="POST" action="datesort.php">
-                  <label>From Date:</label><input type="date" id="from" value="" name="date1" placeholder="From date" >
-                  <label>To Date:</label> <input type="date" id="to" value="" name="date2" placeholder="To date" >             
-                   <input type="submit" class="btn btn-primary" value="Search">
-                </form>              
-                <br>
-              
-                              <form id="statusform" method="POST" action="attendance.php">
-                              <table class="table table-bordered table-stripped" id="attendance_table" >
-                                <thead>
+      <center>        <div class="btn-group" role="group" aria-label="Buttons">
+            <button type="button" class="btn btn-dark" onclick="hide()"id="at">Attendance</button>
+            <button type="button" class="btn btn-dark"  onclick="hide1()" id="att">Attendance Details</button>      
+         </div>
+        </center>
+    <div class="table-responsive">  
+                
+                <!-- Filter Icon Process -->
+                
+                <div class="modal" id="filter">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                    
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Date Sort</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      
+                      <!-- Modal body -->
+                      <div class="modal-body">
+
+                        <form id="sort" method="POST" action="datesort.php">
+                          <label>From Date:</label><input type="date" class="form-control" id="from" value="" name="date1" placeholder="From date" >
+                          <label>To Date:</label> <input type="date" class="form-control" id="to" value="" name="date2" placeholder="To date" >             
+                          <br><center> <input type="submit" class="btn btn-primary" value="Search" data-toggle="modal" data-target="#date"></center>
+                        </form>             
+                      </div>
+                      
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="modal" id="date">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                    
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Attendance List</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                          <table class="table table-striped" id="date_table" >
+                            <thead>
+                            <tr>
+                              <th>Name</th>
+                              <th>Date</th>
+                              <th>Status</th>
+                              <th>Reason</th>
+                            </tr>
+                          </thead>
+                          
+                        </table>
+                       
+                      </div>
+                      
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <!-- Attendance Form -->
+                <div id="tt4">
+                    <h3>Attendance Details</h3>
+                  <form id="statusform" method="POST" action="attendance.php">
+                              <table class="table table-striped" id="attendance_table" >
+                                <thead style="background-color:#1fd3af">
                                   <tr>
                                     <th>Name</th>
                                     <th>Date</th>
@@ -85,10 +156,36 @@
                                   </tr>
                               </thead>                                
                                 </table>
-                               <center><input type="submit" class="btn btn-primary" value="Update"></center> 
+                                <!-- onclick="hide()" -->
+                               <center><input type="submit" name="submit" class="btn btn-primary"  value="Update" ></center> 
                             </form>
-                              <input type="image" src="plus.png" alt="click" width="50" height="50" id="im" data-toggle="modal" data-target="#attendance">
+                            
+                          </div>
 
+                            <div id="tt5">  
+                            <h3>Attendance Details of the Members</h3>        
+                            <div> 
+                              <input type="image" src="filter.png" alt="click" width="35" height="35" id="im" data-toggle="modal" data-target="#filter">
+                            </div>   
+                                    
+                            <table class="table table-striped" id="attendance_details_table" >
+                                      <thead style="background-color:#1fd3af">
+                                        <tr>
+                                          <th>Name</th>
+                                          <th>Date</th>
+                                          <th>Status</th>
+                                          <th>Reason</th>
+                                        </tr>
+                                      </thead>
+                                      
+                                    </table>
+                            
+                                 </div>
+                                
+
+
+
+ 
 
                               <div class="modal" id="attendance">
                                   <div class="modal-dialog">
@@ -104,7 +201,7 @@
                                       <div class="modal-body">
 
                                         <form id="attendance_form" method="POST" action="attendance.php">
-                                          <table class="table table-bordered table-stripped" id="attend_table" >
+                                          <table class="table table-bordered table-striped" id="attend_table" >
                                           <label>Members Attendance</label>
                                             <thead>
                                             <tr>
@@ -133,13 +230,12 @@
      
 
     <!-- First Division Start -->
-    <div id="tt1" >
+    <div id="tt1"  >
     <div class="table-responsive">  
       <h3>Members Details</h3>        
-                    <table class="table table-bordered table-stripped" id="members_table" >
-                      <thead>
+                    <table class="table table-striped" id="members_table" >
+                      <thead style="background-color:#1fd3af">
                         <tr>
-                      
                           <th>Id</th>
                           <th>Name</th>
                           <th>Age</th>
@@ -195,9 +291,8 @@
       </div>
     </div>
   </div>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal1">
-                      Add
-                    </button>
+              <input type="image" src="plus.png" alt="click" width="50" height="50" id="im"  data-toggle="modal" data-target="#myModal1">
+      
                     </div>
                   </div>
       <br>       
@@ -241,27 +336,46 @@
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
-          </div>
-
-
-
-    
-
-
-          
-
-          
+        </div>        
 </body>
 </html>
 
 
 
+
 <script>
+
 var curr_active = $('#t1');
+function hide()
+{
+  var cur_active=$('#tt5');
+      if(cur_active.prop("id")=="tt5")
+ {
+  $('#tt4').show();
+  $('#tt5').hide();
+  
+  }
+}
+function hide1()
+{
+  var cur_active=$('#tt4');
+      if(cur_active.prop("id")=="tt4")
+ {
+  $('#tt4').hide();
+  $('#tt5').show();
+  
+  }
+}
+
 $(document).ready(function(){
+
+
+ 
   $("#tt2").hide();
-   $("#tt3").hide();
-  console.log("populating");
+  $("#tt3").hide();
+ 
+
+   console.log("populating");
   $('#add1').on('submit',function(e){
     e.preventDefault();
     $.ajax({
@@ -282,6 +396,8 @@ $(document).ready(function(){
       });
     });
    
+  
+
 
    $('li').click(function(e){
       $(this).addClass('active');
@@ -290,32 +406,60 @@ $(document).ready(function(){
       console.log($(this).prop("id"));
       if( curr_active.prop("id") == "t1" )
       {
-        $("#tt1").show();$("#tt2").hide();
-   $("#tt3").hide();
-       
+        $("#tt1").show();
+        $("#tt2").hide();
+        $("#tt3").hide(); 
+        $("#tt4").hide();
+        $("#tt5").hide();
       }
       if( curr_active.prop("id") == "t2" )
       {
         $("#tt1").hide();
         $("#tt2").show();
         $("#tt3").hide();
+        $("#tt4").show();
+        $("#tt5").hide();
+        $.ajax({
+        url : 'check_date.php',
+        success : function(result){
+            if(result == 0)
+            {$('#at').prop("enabled",true);
+            $('#tt4').show();
+        }else
+            {$('#at').prop("disabled",true); 
+            $('#tt4').hide(); 
+            $('#tt5').show();   
+        }
+        
+        }     
+      });
+
       }
       if( curr_active.prop("id") == "t3" )
       {
         $("#tt1").hide();
         $("#tt2").hide();
         $("#tt3").show();
+        $("#tt4").hide();
+        $("#tt5").hide();
+      
       }
-    }); 
+    });
+   
+    $('#myList').on('change',function(){
+  console.log($(this).attr("name"));
+});
+
+
+}); 
+
     populate1();
     populate3();
     populate2();
     populate();
-  
-
-}); 
-
-   
+    populate4();
+     
+    
 
 
 $('#edit1').on('submit',function(e){
@@ -338,7 +482,30 @@ $('#edit1').on('submit',function(e){
       });
     });
 
-
+$('#statusform').on('submit',function(e)
+{
+  e.preventDefault();
+    $.ajax({
+    type:'post',
+    url:'attendance.php',
+    data:new FormData(this),
+    contentType:false,
+    cache:false,
+    processData:false,
+    dataType:'text',
+    success:function(result){
+      if(result=="success")
+      alert("Wrong")
+      else
+      $('#at').prop("disabled",true);
+      alert("Done");
+      $('#tt4').hide();
+      $('#tt5').show();
+      
+    }
+  });
+  
+});
 
 function edit(id){
     $.ajax({
@@ -361,9 +528,8 @@ function edit(id){
   }
 
 
-
 function remove_data(id){
-  var result = confirm("want to delete?");
+  var result = confirm("want to delete it?");
   if(result)
   {
     $.ajax({
@@ -392,8 +558,8 @@ $.each(data,function(key,value){
     members_data += '<td>'+value.address+'</td>';
     members_data += '<td>'+value.gender+'</td>';
     members_data += '<td>'+value.experience+'</td>';
-    members_data += '<td>'+'<button type="button" class="btn btn-primary" onclick="edit('+value.id+')" id="'+value.id+'" data-toggle="modal" data-target="#myModal">Edit</button>'+'</td>';
-    members_data += '<td>'+'<button type="button" class="btn btn-primary" onclick="remove_data('+value.id+')" id="'+value.id+'">delete</button>'+'</td>';
+    members_data += '<td>'+'<input type="image" src="edit.png" alt="click" width="20" height="20" id="edit"  onclick="edit('+value.id+')" id="'+value.id+'" data-toggle="modal" data-target="#myModal">'+'</td>';
+    members_data += '<td>'+'<input type="image" src="delete.png" alt="click" width="20" height="20" id="delete"  onclick="remove_data('+value.id+')" id="'+value.id+'">'+'</td>';
    
     members_data += '<tr>';
 
@@ -415,23 +581,25 @@ $('#datePicker').prop('max', today);
 
 function populate1(){
 $.getJSON("attend.php",function(data){
-  var i=1;
+   i=1; 
   console.log(data);
 var attend_data = '<tbody>';
 $.each(data,function(key,value){
     attend_data += '<tr>';
-    attend_data += '<td>'+'<input type="text" class="form-control"  id="name" value='+value.name+' name="name_'+i+'" disabled></td>';
-    attend_data += '<td>'+'<input type="date" class="form-control" value="" id="datePicker" name="date_'+i+'">'+'</td>';
-    attend_data += '<td>'+'<select class="form-control" name="status_'+i+'" id = "myList">'+
+    attend_data += '<td>'+'<input type="text" class="form-control"  id="name" value='+value.name+' name="name['+i+']"></td>';
+    attend_data += '<td>'+'<input type="date" class="form-control" value="" id="datePicker" name="date['+i+']">'+'</td>';
+    attend_data += '<td>'+'<select class="form-control" name="status['+i+']" id = "myList">'+
                '<option value = "present">Present</option>'+
                '<option value = "abcent">Abcent</option>'+
              '</select>'
      +'</td>';
-    attend_data += '<td>'+'<input type="text" class="form-control"  name="reason_'+i+'"  id="reason" value="">'+'</td>';
+    attend_data += '<td>'+'<input type="text" class="form-control"  name="reason['+i+']"  id="reason" value="">'+'</td>';
     attend_data += '<tr>';
    i++; 
+
 });
 attend_data += "</tbody>";
+
 $('#attendance_table').append(attend_data);
 console.log(attend_data);
 });
@@ -458,16 +626,17 @@ function populate2(){
            var attend_data = '<tbody>';
      $.each(result,function(key,value){
     attend_data += '<tr>';
-    attend_data += '<td>'+value.sno+'</td>';
+    attend_data += '<td>'+value.name+'</td>';
     attend_data += '<td>'+value.date+'</td>';
-    attend_data += '<td>'+value.id+'</td>';
     attend_data += '<td>'+value.status+'</td>';
     attend_data += '<td>'+value.reason+'</td>';
     attend_data += '<tr>';
 
 });
 attend_data += "</tbody>";
-$('#attendance_table').append(attend_data);
+$('#date_table tbody').remove();
+     populate2();
+$('#date_table').append(attend_data);
         }
 
       });
@@ -494,7 +663,32 @@ $.each(data,function(key,value){
 i++;
 });
 a_data += "</tbody>";
+//$('#attend_table tbody').remove();
+  //      populate3();
 $('#attend_table').append(a_data);
 });
 }
+function populate4(){
+$.getJSON("attendance_detailshow.php",function(data){
+var members_data = '<tbody>';
+$.each(data,function(key,value){
+    members_data += '<tr>';
+    members_data += '<td>'+value.name+'</td>';
+    members_data += '<td>'+value.date+'</td>';
+    members_data += '<td>'+value.status+'</td>';
+    members_data += '<td>'+value.reason+'</td>';
+    members_data += '<tr>';
+
+});
+members_data += "</tbody>";
+$('#attendance_details_table tbody').remove();
+$('#attendance_details_table').append(members_data);
+populate4();
+});
+}
+
+setInterval(function(){
+ 
+       populate4(); }, 100000);
+   
 </script>

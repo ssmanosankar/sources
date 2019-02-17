@@ -1,0 +1,231 @@
+#search_bar{
+    margin-left: 0px;
+    margin-top: 10px;
+    height: 15px;
+    width: 30%;
+    border: none;
+    font-size: 15px;
+}
+/* Search icon */
+#search_icon{
+    margin-left: 10px;
+    position: relative;
+    top: 1px;
+    width: 15px;
+}
+body{
+    background: white;
+    padding: 0%;
+    margin: 0%;
+    overflow-y: scroll;
+}
+/* Parent two top */
+body .top{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    background: white;
+}
+/* User tab */
+body .user{
+    align-items: flex-start;
+    display: flex;
+    width: 130px;
+    height: 30px;
+    margin: 0px auto;
+    float: right;
+    border-left: 1px solid black;
+    padding-left: 10px;
+}
+/* select box */
+body .user select{
+    margin: 5px;
+}
+/* Top content area */
+body .top .content{
+    width: 100%;
+}
+.add{
+    display: flex;
+}
+#t1{
+    position: fixed;
+    top:09%;
+    font-size: 120%;
+    left: 6%;
+}
+#add{
+    position: fixed;
+    top:08%;
+}
+.dealer{
+    position: fixed;
+    top:15%;
+    left:04%;
+    width: 700px;
+    height: 300px;
+    background: white; 
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+.items{
+    position: fixed;
+    top:7%;
+    right: 01%;
+    width: 28%;
+    height: 100%;
+    background: white; 
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+.dealer_n_class{
+    display: flex;
+}
+.dealer_c_class{
+    display: flex;
+}
+.dealer_ca_class{
+    display: flex;
+}
+.dealer_nn_class{
+    display: flex;
+}
+.dealer_a_class{
+    display: flex;
+}
+.dealer_s_class{
+    display: flex;
+}
+.dealer_ap_class{
+    display: flex;
+}
+#dn{
+    position: fixed;
+    font-size: 120%;
+    top:18%;
+    left: 7%;
+}
+#dealer_name{
+    font-size: 110%;
+    position:fixed;
+    top:18%;
+    left: 18%;
+}
+#dc{
+    font-size: 120%;
+    position: fixed;
+    top:23%;
+    left: 5%;
+}
+#dealer_contact{
+    font-size: 110%;
+    position: fixed;
+    top:23%;
+    left: 18%
+}
+#dca{
+    font-size: 120%;
+    position: fixed;
+    top:28%;
+    left: 10%;
+}
+#dealer_category{
+    font-size: 110%;
+    position: fixed;
+    top:28%;
+    left:18%;
+}
+#dnn{
+    font-size: 120%;
+    position: fixed;
+    top:34%;
+    left: 9%;
+}
+#dealer_nick_name{
+    font-size: 110%;
+    position: fixed;
+    top:34%;
+    left:18%;
+}
+#da{
+    font-size: 120%;
+    position: fixed;
+    top:40%;
+    left: 6%;
+}
+#dealer_address{
+    font-size: 110%;
+    position: fixed;
+    top:40%;
+    left: 18%;
+}
+#ds{
+    font-size: 120%;
+    position: fixed;
+    top:46%;
+    left:5%;
+}
+#dealer_purchase{
+    font-size: 110%;
+    position: fixed;
+    top:46%;
+    left: 18%;
+}
+#dap{
+    font-size: 120%;
+    position: fixed;
+    top:52%;
+    left: 8%;    
+}
+#dealer_amount{
+    font-size: 110%;
+    position: fixed;
+    top:52%;
+    left: 18%;
+}
+#add_dealers{
+    background-color: #217da2;
+    position: fixed;
+    top:55.6%;
+    left: 58%;
+    border-radius: 0px;
+    border-top-left-radius: 8px; 
+}
+#ai{
+    font-size: 150%;
+    position: fixed;
+    right: 9%;
+    top:8%;
+    color:#fdeff0;
+}
+.at{
+    width:100%;
+    height:6%;
+    background-color:#d14c4d;
+
+}
+th{
+font-size: 120%;
+width: 100%;
+background-color: #ededed;
+}
+td{
+font-size: 110%;
+border-bottom: none;
+font-weight: 400;
+}
+#tt{
+    padding-left: 25px;
+}
+#ttt
+{
+    padding-right:60px;
+}
+#tt1{
+    padding-left: 25px;
+}
+#tt2{
+    padding-right: 20px;
+}
+#tt3{
+    padding-right: 30px;
+}

@@ -1,0 +1,333 @@
+#search_bar{
+    margin-left: 0px;
+    margin-top: 10px;
+    height: 15px;
+    width: 30%;
+    border: none;
+    font-size: 15px;
+}
+/* Search icon */
+#search_icon{
+    margin-left: 10px;
+    position: relative;
+    top: 1px;
+    width: 15px;
+}
+body{
+    background: white;
+    padding: 0%;
+    margin: 0%;
+    overflow-y: scroll;
+}
+/* Parent two top */
+body .top{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    background: white;
+}
+/* User tab */
+body .user{
+    align-items: flex-start;
+    display: flex;
+    width: 130px;
+    height: 30px;
+    margin: 0px auto;
+    float: right;
+    border-left: 1px solid black;
+    padding-left: 10px;
+}
+/* select box */
+body .user select{
+    margin: 5px;
+}
+/* Top content area */
+body .top .content{
+    width: 100%;
+}
+#all{
+    width: 100px;
+    color: white;
+    background-color: #7e0200;
+    position: fixed;
+    top:100px;
+}
+.employee_count{
+    position: fixed;
+    top:150px;
+    left: 10px;
+    border-top: 1px solid #f3f3f3;
+    border-bottom: 1px solid #f3f3f3;
+  
+}
+.a1{
+    display: flex;
+    width: 150px;
+    height: 50px;
+    background: white; 
+    }
+#at{
+   position: absolute;
+   top:10px;
+   left:05px;
+   color: black;
+}
+#at_c{
+    position:absolute;
+    top:10px;
+    left: 90px;
+}
+#cl{
+position: absolute;
+top:60px;
+left:05px;
+color: black;
+}
+#cl_c{
+    position:absolute;
+    top:60px;
+    left: 90px;
+}
+.list_of_employee{
+    position: fixed;
+    left:230px;
+    top:80px;
+    width: 250px;
+    height: 450px;
+    background: white; 
+    border-radius: 6px;
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.personal_details{
+    position: fixed;
+    right: 10px;
+    top:80px;
+    width: 600px;
+    height: 450px;
+    background: white; 
+    border-radius: 6px;
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+.second{
+    display: flex;
+}
+#search_bars{
+    margin-left: 2px;
+    margin-top: 12px;
+    height: 20px;
+    width:  150px;
+    border: none;
+    font-size: 15px;
+}
+/* Search icon */
+#search_icons{
+    margin-left: 10px;
+    position: relative;
+    top: 0px;
+    width: 15px;
+}
+.name_search{
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    background: white;
+    height: 45px;
+    width: 230px;
+    margin-top: 5px;
+    margin-left:5px; 
+}
+.each_details{
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    background: white;
+    height: 50px;
+    width: 230px;
+    margin-top: 5px;
+    margin-left:5px; 
+}
+.one{
+    display: flex;
+}
+#image{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+#name{
+margin-top: 15px;
+margin-left: 35px;
+}
+#main_img{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.n1{
+    display: flex;
+}
+.p1{
+    display: flex;
+}
+.a1{
+    display: flex;
+}
+.l1{
+    display: flex;
+}
+.d1{
+    display: flex;
+}
+.da1{
+    display: flex;
+}
+.t1{
+    display: flex;
+}
+.u1{
+    display: flex;
+}
+.p1{
+    display: flex;
+}
+#name1{
+    position: fixed;
+    top:122px;
+    right: 370px;
+    font-size: 18px
+}
+#name_value1{
+    position: fixed;
+    top:125px;
+    right: 280px;
+    font-size: 16px;
+}
+#phone_number1{
+    position: fixed;
+    top:160px;
+    right: 299px;
+    font-size: 18px;
+}
+#phone_value1{
+    position: fixed;
+    top:162px;
+    right: 200px;
+    font-size: 16px;
+}
+#phone_value2{
+    position: fixed;
+    top:162px;
+    right: 105px;
+    font-size: 16px;
+}
+#permanent_address1{
+    position: fixed;
+    font-size: 18px;
+    top:230px;
+    right: 420px;
+}
+#permanent_value1
+{
+    position: fixed;
+    font-size: 16px;
+    top:232px;
+    right: 140px;
+}
+#living_address1{
+    position: fixed;
+    font-size: 18px;
+    top:265px;
+    right: 420px;
+    
+}
+#living_value1{
+    position: fixed;
+    font-size: 16px;
+    top:267px;
+    right: 140px;
+}
+#date_join1{
+    position: fixed;
+    font-size: 18px;
+    top:300px;
+    right:420px;
+}
+#date_value1{
+    position: fixed;
+    top:300px;
+    font-size: 16px;
+    right:339px;
+}
+#days_worked1{
+    position: fixed;
+    top:330px;
+    font-size: 18px;
+    right:420px;
+}
+#days_value1{
+    position: fixed;
+    top:330px;
+    font-size: 16px;
+    right: 390px;
+}
+#month_value1{
+    position: fixed;
+    top:330px;
+    font-size: 16px;
+    right: 355px;
+}
+#table_attended1{
+    position: fixed;
+    top:360px;
+    font-size: 18px;
+    right: 420px;
+    
+}
+#table_value1{
+    position: fixed;
+    top:360px;
+    font-size: 16px;
+    right: 390px;
+}
+#month_value2{
+    position: fixed;
+    top:360px;
+    font-size: 16px;
+    right: 355px;
+}
+#user_id1{
+    position: fixed;
+    top:390px;
+    font-size: 18px;
+    right: 420px;    
+}
+#user_value1{
+    position: fixed;
+    top:390px;
+    font-size: 16px;
+    right: 360px;
+}
+#password1{
+    position: fixed;
+    top:420px;
+    font-size: 18px;
+    right:420px;
+}
+#password_value1{
+    position: fixed;
+    top:420px;
+    font-size: 16px;
+    right:350px;
+    
+}
+#delete{
+    width: 120px;
+    color: white;
+    background-color: #7e0200;
+    position: fixed;
+    top:470px;
+    right: 50px;
+}
+#a2{
+    position: fixed;
+    top:480px;
+    right:520px;
+}

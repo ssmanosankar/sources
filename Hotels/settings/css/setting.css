@@ -1,0 +1,161 @@
+#search_bar{
+    margin-left: 0px;
+    margin-top: 10px;
+    height: 15px;
+    width: 30%;
+    border: none;
+    font-size: 15px;
+}
+/* Search icon */
+#search_icon{
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+    width: 15px;
+}
+body{
+    background: white;
+    padding: 0%;
+    margin: 0%;
+    overflow-y: scroll;
+}
+/* Parent two top */
+body .top{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    background: white;
+}
+/* User tab */
+body .user{
+    align-items: flex-start;
+    display: flex;
+    width: 130px;
+    height: 30px;
+    margin: 0px auto;
+    float: right;
+    border-left: 1px solid black;
+    padding-left: 10px;
+}
+/* select box */
+body .user select{
+    margin: 5px;
+}
+/* Top content area */
+body .top .content{
+    width: 100%;
+}
+#t1{
+    font-size: 15px;
+}
+#content_name{
+    height: 470px;
+}
+#admin_change{
+    position: fixed;
+    top:50px;
+    right: 10px;
+    width: 240px;
+    height: 270px;
+    background: white; 
+    border-radius: 6px;
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+#chat{
+    position: fixed;
+    top: 340px;
+    right: 10px;
+    width: 240px;
+    height: 290px;
+    background: white; 
+    border-radius: 6px;
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+#tc{
+    
+    width: 800px;
+    height: auto;
+    background: white; 
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+#osl{
+  
+    width: 800px;
+    height: auto;
+    background: white; 
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+#at{
+    
+    width: 800px;
+    height: auto;
+    background: white; 
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+#s1{
+    color: white;
+   background-color:#217da2;
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  position: fixed;
+  top:250px;
+  right: 65px;
+}
+#box1{
+    width: 160px;
+     position: fixed;
+     top:100px;
+     right: 45px;
+     border-radius: 8px;
+}
+#box2
+{
+    width: 160px;
+     position: fixed;
+     top:150px;
+     right: 45px;
+     border-radius: 8px;
+
+}
+#box3{
+
+    width: 160px;
+     position: fixed;
+     top:200px;
+     right: 45px;
+     border-radius: 8px;
+     
+}
+#s2{
+    color: white;
+    background-color:#217da2;
+    width: 120px;
+    height: 40px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: fixed;
+    top:590px;
+    right: 12px;  
+
+}
+#box4{
+    
+    position: fixed;
+    width:230px;
+    height:240px;
+    top:343px;
+    right: 15px; 
+}
+a{
+    color: #000;
+}
+label{
+    position: fixed;
+    top:65px;
+    right: 35px;
+}
