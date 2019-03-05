@@ -1,0 +1,233 @@
+<html>
+       <body>
+<div class="details_window_no_of_staffs details_window">
+    <img class="close" src="icons/back.png" alt="">
+    <h1 class="text-center">Staffs Detail</h1>
+    <div class="one">
+        <div width="100%" class="text-center">
+            <button class="btn btn-primary">All 300</button>
+        </div>
+        <div class="teaching_staffs">
+            <h4 class="text-center">Teaching Staffs</h4>
+            <div class="gents">
+                <p>Gents</p>
+                <a href=""><u>100</u></a>
+            </div>
+            <div class="ladies">
+                <p>Ladies</p>
+                <a href=""><u>50</u></a>
+            </div>
+        </div>
+        <div class="non_teaching_staffs">
+            <h4 class="text-center">Non Teaching Staffs</h4>
+            <div class="gents">
+                <p>Gents</p>
+                <a href=""><u>100</u></a>
+            </div>
+            <div class="ladies">
+                <p>Ladies</p>
+                <a href=""><u>50</u></a>
+            </div>
+        </div>
+    </div>
+    <div class="two">
+        <div class="search">
+            <img src="icons/search.png" alt="">
+            <input type="search" name="" id="" placeholder="Search">
+        </div>
+        <h3 class="heading text-center">Heading</h3>
+        <div class="staffs_list">
+            <p class="staff text-center" id="ts101">Dummy</p>
+            <p class="staff text-center" id="ts102">Dummy</p>
+        </div>
+    </div>
+    <div class="three">
+        <div class="staff_data">
+            <h2 class="name text-center">ts101 - Sankar</h2>
+            <p class="staff_type text-center">Teaching staff</p>
+            <p class="qualification"><b>Qualification : </b>B.E</p>
+            <p class="father_name"><b>Father : </b>Sundaram</p>
+            <p class="permanan_address"><b>Permanant Address : </b>Poyampalayam</p>
+            <p class="communication_address"><b>Communication Address : </b>Pandiyan nagar</p>
+            <p class="mobile_1"><b>Mobile primary : </b>+91 8012329217</p>
+            <p class="mobile_2"><b>Mobie secondary : </b>+91 8838616409</p>
+            <p class="mother_tongue"><b>Mother tongue : </b>Tamil</p>
+            <p class="blood_group"><b>Blood group : </b>O+ve</p>
+            <p class="allergy"><b>Allergy : </b>None</p>
+        </div>
+    </div>
+</div>
+<div class="details_window_extra_curriculum details_window">
+    <img src="icons/back.png" alt="">
+    <h1 class="text-center">Extra curriculum</h1>
+</div>
+<div class="details_window_extra_curriculum details_window">
+    <img src="icons/back.png" alt="">
+    <h1 class="text-center">Extra curriculum</h1>
+</div></body></html>
+<script>
+var selected_row = 1;
+    $(document).on('click','.details_window_no_of_students .grade_details table tbody tr',function () {
+        if (selected_row == $(this).prop('id') ){
+            return;
+        }
+        else
+        {
+            $('.grade_details table tbody #'+selected_row).removeClass('selected');
+            $(this).addClass('selected');
+            selected_row = $(this).prop('id');
+            var standard = $(this).find('td:eq(0)').text();
+            var section = $(this).find('td:eq(1)').text();
+            populateStudentsDetails(standard,section);
+        }
+    });
+    // onclick event on modify button in the students card view
+    $(document).on('click','.details_window_no_of_students .student_details .card a',function (e) {
+        e.preventDefault();
+        populateStudentData($(this).prop('id'));
+        $('.student_details_window').css({
+            "opacity" : "1",
+            "z-index" : "1"
+        });
+    });
+
+    //closing the student data view
+    $('.details_window_no_of_students .student_details_window .close_two').click(function () {
+        $('.student_details_window').css({
+            "opacity" : "0",
+            "z-index" : "-100"
+        });
+    });
+
+
+//    -------------------------------------------------------
+
+//    Scripts for details window of staff details
+
+    //selecting a staff
+    var selected_staff = "";
+    $(document).on('click','.details_window_no_of_staffs .staff',function () {
+        var id = $(this).prop('id');
+        if(id == selected_staff)
+            return;
+       $(this).addClass('selected');
+       if(selected_staff != "")
+           $('#'+selected_staff).removeClass('selected');
+       selected_staff = id;
+       putStaffDetails(selected_staff);
+    });
+    
+    // click event in the first div
+    $('.details_window_no_of_staffs .one button').click(function (e) {
+        e.preventDefault();
+        populateStaffsDetails_two('all','');
+        $('.details_window_no_of_staffs .three .staff_data').remove();
+        $('.details_window_no_of_staffs .two .heading').html("All Staffs");
+    });
+    $('.details_window_no_of_staffs .one .teaching_staffs .gents a').click(function (e) {
+        e.preventDefault();
+        populateStaffsDetails_two('teaching','male');
+        $('.details_window_no_of_staffs .three .staff_data').remove();
+        $('.details_window_no_of_staffs .two .heading').html("Teaching Staffs(Gents)");
+    });
+    $('.details_window_no_of_staffs .one .teaching_staffs .ladies a').click(function (e) {
+        e.preventDefault();
+        populateStaffsDetails_two('teaching','female');
+        $('.details_window_no_of_staffs .three .staff_data').remove();
+        $('.details_window_no_of_staffs .two .heading').html("Teaching Staffs(Ladies)");
+    });
+    $('.details_window_no_of_staffs .one .non_teaching_staffs .gents a').click(function (e) {
+        e.preventDefault();
+        populateStaffsDetails_two('non_teaching','male');
+        $('.details_window_no_of_staffs .three .staff_data').remove();
+        $('.details_window_no_of_staffs .two .heading').html("NonTeaching Staffs(Gents)");
+    });
+    $('.details_window_no_of_staffs .one .non_teaching_staffs .ladies a').click(function (e) {
+        e.preventDefault();
+        populateStaffsDetails_two('non_teaching','female');
+        $('.details_window_no_of_staffs .three .staff_data').remove();
+        $('.details_window_no_of_staffs .two .heading').html("NonTeaching Staffs(Ladies)");
+    });
+
+    // initially clicking the "All" button
+    $('.details_window_no_of_staffs .one button').click();
+//    --------------
+//    Initial functions call
+    fill_students_card();
+    fill_staffs_crad();
+    populateGradeDetails();
+    populateStaffsDetails_one();
+//-----------populating the details window of staffs(For the first division)
+function populateStaffsDetails_one() {
+
+$.ajax({
+   url : path+'staffsCount.php',
+   dataType : 'json',
+   success : function (result) {
+       // console.log("inside the populateStaffsDetails_one");
+       // console.log(result);
+       $('.details_window_no_of_staffs .one button').html("All "+result['total_count']);
+       //Teaching Staffs
+       $('.details_window_no_of_staffs .one .teaching_staffs .gents a').html("<u>"+result['teaching']['gents']+"</u>");
+       $('.details_window_no_of_staffs .one .teaching_staffs .ladies a').html("<u>"+result['teaching']['ladies']+"</u>");
+       //  Non Teaching Staffs
+       $('.details_window_no_of_staffs .one .non_teaching_staffs .gents a').html("<u>"+result['non_teaching']['gents']+"</u>");
+       $('.details_window_no_of_staffs .one .non_teaching_staffs .ladies a').html("<u>"+result['non_teaching']['ladies']+"</u>");
+   }
+});
+
+}
+//-----------populating the details of the staffs(For the second division)
+function populateStaffsDetails_two(teaching_category,gender) {
+// console.log("yes i am called");
+// console.log(teaching_category+"   "+gender);
+$.ajax({
+    type : 'post',
+    url : path+'staffsDetails.php',
+    data : {teaching_category : teaching_category, gender : gender},
+    dataType : 'json',
+    success : function (result) {
+        // console.log("inside populateStaffsDetails_two");
+        // console.log(result);
+        var data = '';
+        $('.details_window_no_of_staffs .staffs_list .staff').remove();
+        var target = $('.details_window_no_of_staffs .staffs_list');
+        $.each(result,function (key, value) {
+            data = '<p class="staff text-center" id="'+value.staff_id+'">'+value.name+'</p>';
+            target.append(data);
+        });
+    }
+});
+}
+//-------putting the details of the staff
+function putStaffDetails(staff_id) {
+console.log("yes i am");
+$.ajax({
+    type : 'post',
+    url : path+'getStaffData.php',
+    data : {staff_id : staff_id},
+    dataType : 'json',
+    success : function (result) {
+        // console.log("inside putStaffDetails.php");
+        // console.log(result);
+        var target = $('.details_window_no_of_staffs .three');
+        $('.details_window_no_of_staffs .three .staff_data').remove();
+        var isteaching = (result['staff_type'] == 'teaching') ? "Teaching Staff" : "Non Teaching Staff";
+        var data = '            <div class="staff_data">\n' +
+            '                <h2 class="name text-center">'+result['name']+'</h2>\n' +
+            '                <p class="staff_type text-center">'+isteaching+'</p>\n' +
+            '                <p class="qualification"><b>Qualification : '+result['qualification']+'</b></p>\n' +
+            '                <p class="father_name"><b>Father : </b>'+result['father_name']+'</p>\n' +
+            '                <p class="permanent_address"><b>Permanant Address : </b>'+result['permanent_address']+'</p>\n' +
+            '                <p class="communication_address"><b>Communication Address : </b>'+result['communication_address']+'</p>\n' +
+            '                <p class="mobile_1"><b>Mobile primary : </b>+91 '+result['mobile_1']+'</p>\n' +
+            '                <p class="mobile_2"><b>Mobie secondary : </b>+91 '+result['mobile_2']+'</p>\n' +
+            '                <p class="mother_tongue"><b>Mother tongue : </b>'+result['mother_tongue']+'</p>\n' +
+            '                <p class="blood_group"><b>Blood group : </b>'+result['blood_group']+'ve</p>\n' +
+            '                <p class="allergy"><b>Allergy : </b>'+result['allergy']+'</p>\n' +
+            '            </div>';
+        target.append(data);
+    }
+});
+}
+</script>

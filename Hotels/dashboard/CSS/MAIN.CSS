@@ -1,0 +1,270 @@
+.table{
+    display: flex;
+    border-bottom: 1px solid rgb(202, 13, 13);
+    height:200px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.Table1{
+    position: relative;
+    background: #CB3301;
+    width: 285px;
+    height: 153px;
+    margin-left: 1%;
+    margin-top: 6px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    color: white;
+}
+
+body{
+    background: white;
+    padding: 0%;
+    margin: 0%;
+}
+/* Parent two top */
+body .top{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    background: white;
+}
+/* User tab */
+body .user{
+    align-items: flex-start;
+    display: flex;
+    width: 130px;
+    height: 30px;
+    margin: 0px auto;
+    float: right;
+    border-left: 1px solid black;
+    padding-left: 10px;
+}
+/* select box */
+body .user select{
+    margin: 5px;
+}
+/* Top content area */
+body .top .content{
+    width: 100%;
+}
+/* search bar */
+#search_bar{
+    margin-left: 0px;
+    margin-top: 10px;
+    height: 15px;
+    width: 30%;
+    border: none;
+    font-size: 15px;
+}
+/* Search icon */
+#search_icon{
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+    width: 15px;
+}
+/* Menu icon */
+#menu_icon{
+    margin-left: 10px;
+    position: relative;
+    top: 7px;
+    width: 22px;
+}
+/* Tab two */
+
+#text{
+    color: rgb(0, 0, 0);
+    margin: 5px;
+    font-size: 18px;
+}
+.tool_bar {
+    display: flex;
+    border-bottom:1px solid red;
+}
+.tool_bar img{
+        height: 100%;
+}
+
+ #t1{
+    margin-left: 108px;
+    margin-bottom: 4px; 
+     font-size: 20px;
+}
+.chair_icon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 45px;
+    top: 08px;
+}
+
+ .text1{
+    margin-right: 60px;
+    margin-bottom: 0px; 
+    margin-left: 127px;
+    margin-top:10px;
+    font-size: 22px; 
+}
+  
+ .text2{
+    width: 125px;  
+    margin-left: 75px;
+    height: 25px;
+    margin-right: 40px;
+    padding-top: 0px;
+     font-size: 17px;
+     margin-bottom: 8px;
+}
+.text3{
+    position:absolute;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 70px;
+    height: 25px;
+    width: 70px;
+    font-size: 20px;
+}
+.text4{
+    position: absolute; 
+    margin-top: 0px;
+    margin-left: 160px;
+    font-size: 21px;
+    
+}
+.table a{
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
+    margin-right: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+ .cup_icon{
+    position: absolute; 
+    width: 30px;
+    top: 30px;
+    margin-left: 32px;
+    margin-top:45px; 
+     margin-bottom: 0px;
+}
+.second{
+    display: flex;
+}
+.attender_status{
+    background: white;
+    width: 60%;
+    height: 390px;
+    margin-top: 2px;
+    margin-left: 0px;
+    border-radius: 2px;
+    border-top: 1px solid salmon;
+    border-right: 1px solid salmon;
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+
+}
+.item_overview{
+    
+    background: white;
+    width: 40%;
+    height: 390px;
+    margin-top: 2px;
+    margin-left: 5px;
+    margin-right:0px; 
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+#item_overview_top{
+    font-size: 22.5px;
+    margin-bottom:2px; 
+    border-bottom:1px solid black;
+}
+#item_overview_table{
+ border-bottom: 0px;
+ margin-top: 0px;
+}
+#attenders_table{
+    border-bottom: 0px;
+    margin-top: 0px;
+}
+table{
+    border-collapse: collapse; 
+}
+#attenders_table th{
+    text-align: left;
+    padding: 8px 12px 4px 8px;
+    border-bottom:  1px solid black;
+    border-top: 1px solid black;
+   
+}
+#attenders_table td{
+     text-align: left;
+    padding: 8px 53px 4px 8px;
+    
+}
+#item_overview_table th{
+    text-align: left;
+    padding: 8px 60px 4px 12px;
+    border-bottom:  1px solid #1233;
+
+}
+#item_overview_table td{
+    text-align: left;
+     padding: 8px 80px 4px 18px;
+}
+#date{
+    margin-bottom: 0px;
+}
+#dd{
+    display:flex;
+}
+#h{
+background-color: #CB3301;
+height: 1%;
+}
+#hotel_name{
+    position: absolute;
+    left:30%;
+}
+.modal-dialog {
+    width: 45%;
+    height:150% !important;
+  }
+.modal-content {
+height: 60%;
+background-color:white;
+}        
+.modal-header {
+background-color:#b71e00;
+padding:16px 16px;
+color:white;
+height: 60px;;
+}
+.table_number{
+    display: flex;
+}
+.time_details{
+    display: flex;
+}
+.date_details{
+    display: flex;
+}
+.bill_details{
+    display: flex;
+}
+.attender_details{
+    display: flex;
+}
+.item_details{
+    display: flex;
+}
+.d1{
+    display: flex;
+}
+.d2{
+    display: flex;
+}
+

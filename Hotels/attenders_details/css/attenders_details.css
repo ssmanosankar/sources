@@ -148,12 +148,13 @@ color: black;
 }
 .one{
     display: flex;
+    cursor: pointer;
 }
 #image{
     margin-top: 5px;
     margin-left: 20px;
 }
-#name{
+.names{
 margin-top: 15px;
 margin-left: 35px;
 }
@@ -254,7 +255,7 @@ margin-left: 35px;
     position: fixed;
     top:300px;
     font-size: 16px;
-    right:339px;
+    right:330px;
 }
 #days_worked1{
     position: fixed;
@@ -315,7 +316,7 @@ margin-left: 35px;
     position: fixed;
     top:420px;
     font-size: 16px;
-    right:350px;
+    right:320px;
     
 }
 #delete{
@@ -330,4 +331,17 @@ margin-left: 35px;
     position: fixed;
     top:480px;
     right:520px;
+}
+#nametag1{
+    position: absolute;
+    top:10px;
+    left: 5px;
+}
+#nametag2{
+    position: absolute;
+    top:20px;
+    left: 5px;
+}
+.selected{
+    background-color: rosybrown;
 }

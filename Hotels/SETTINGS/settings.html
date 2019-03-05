@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/setting.css">
+    <script src="js/settings.js"></script>
+
+</head>
+
+<body>
+    <!-- Top Search Icon -->
+
+    <div class="col-lg-12 body">
+        <div class="top" style="height: 34px;">
+            <div class="content">
+                <img src="icon/SEARCH.PNG" alt="" id="search_icon">
+                <input type="search" name="" id="search_bar" placeholder="Search invoice, Bill number" style="width: 902px;height: 22px;margin-top: 4px;">
+            </div>
+            <div class="user">
+                <select name="position" id="manager">
+                    <option value="manager">Manager</option>
+                </select>
+            </div>
+        </div>
+        </div>
+
+        <!-- Settings  Content -->
+        <div id="review">
+
+            <div id="content_name">
+                <br>
+                <div class="setting">
+                    <a href="" class="t1">Terms&Conditions</a>
+                    <div id="tc">
+                        Terms<br>
+                        Conditions
+                    </div>
+                </div>
+<br>
+
+                <div class="setting">
+                    <a href="" class="t2">Open Source Library</a>
+                    <div id="osl">
+                        Open<br>
+                        Source<br>
+                        Library
+                    </div>
+                </div>
+
+<br>
+                <div class="setting">
+                    <a href="" class="t3">About Tentrecen</a>
+                    <div id="at">
+                        About<br>
+                        Tentrecen
+                    </div>
+                </div>
+            </div>
+
+            <div id="admin_change">
+                <div>
+                    <label>Admin Password Change</label>
+                </div>
+                <center>
+               <form id="admin_changes" class="form-horizontal" action="php/admin_change.php" method="POST">
+                <input type="password" id="box1" class="form form-control" name="oldpw" value="" placeholder="Old Password">
+    
+                <input type="password" id="box2" class="form form-control"  name="newpw" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="A Password Must Contain Minimum Length is 6.And It password Contain One UPPER CASE and Lower Case and Digits.. " placeholder="New Password">
+            
+                <input type="password" id="box3" class="form form-control" name="conpw" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="A Password Must Contain Minimum Length is 6.And It password Contain One UPPER CASE and Lower Case and Digits.. " placeholder="Confirm Password">
+    
+                <input type="submit" id="s1" value="Change">
+           
+            </form>
+        </center>   
+        </div>
+
+            <div id="chat">
+            
+        <form id="reviews" class="form-form-control" action="php/review_mail.php" method="post">
+            <div class="form-group">
+                    <textarea class="form-control" rows="5" id="box4" name="comment">Any Complaints/Suggestions are type here</textarea>            </div>
+            <input type="submit" id="s2" value="Send"> 
+        </form>
+
+            </div>
+
+        </div>
+
+</body>
+
+</html>
+<script>
+$(function () {
+        $("#s1").click(function () {
+            var password = $("#box2").val();
+            var confirmPassword = $("#box3").val();
+            if (password != confirmPassword) {
+                alert("Confirm Passwords do not match.");
+                return false;
+            }
+            return true;
+        });
+    });
+</script>

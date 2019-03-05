@@ -1,0 +1,413 @@
+#search_bar{
+    margin-left: 0px;
+    margin-top: 10px;
+    height: 15px;
+    width: 30%;
+    border: none;
+    font-size: 15px;
+}
+/* Search icon */
+#search_icon{
+    margin-left: 10px;
+    position: relative;
+    top: 1px;
+    width: 15px;
+}
+body{
+    background: white;
+    padding: 0%;
+    margin: 0%;
+    overflow-y: scroll;
+}
+/* Parent two top */
+body .top{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    background: white;
+}
+/* User tab */
+body .user{
+    align-items: flex-start;
+    display: flex;
+    width: 130px;
+    height: 30px;
+    margin: 0px auto;
+    float: right;
+    border-left: 1px solid black;
+    padding-left: 10px;
+}
+/* select box */
+body .user select{
+    margin: 5px;
+}
+/* Top content area */
+body .top .content{
+    width: 100%;
+}
+.add{
+    display: flex;
+}
+#t1{
+    position: absolute;
+    top:165%;
+    font-size: 120%;
+    left: 6%;
+    cursor: pointer;
+}
+#add{
+    position: fixed;
+    top:08%;
+}
+.dealer{
+    position: fixed;
+    top:15%;
+    left:04%;
+    width: 700px;
+    height: 300px;
+    background: white; 
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+.items{
+    position: fixed;
+    top:7%;
+    right: 01%;
+    width: 28%;
+    height: 100%;
+    background: white; 
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+
+#ai{
+    font-size: 150%;
+    position: fixed;
+    right: 9%;
+    top:8%;
+    color:#fdeff0;
+}
+.at{
+    width:100%;
+    height:6%;
+    background-color:#d14c4d;
+
+}
+th{
+font-size: 120%;
+width: 100%;
+background-color: #ededed;
+}
+td{
+font-size: 110%;
+border-bottom: none;
+font-weight: 400;
+}
+#tt{
+    padding-left: 25px;
+}
+#ttt
+{
+    padding-right:60px;
+}
+#tt1{
+    padding-left: 25px;
+}
+#tt2{
+    padding-right: 20px;
+}
+#tt3{
+    padding-right: 30px;
+}
+#ad
+{
+    position: absolute;
+    top:160%;
+    left:2%;
+}
+.modal-dialog {
+    width: 45%;
+    height:150% !important;
+  }
+.modal-content {
+/* 80% of window height */
+height: 60%;
+}        
+.modal-header {
+background-color:#d14c4d;
+padding:16px 16px;
+color:#FFF;
+}
+.modal-body {
+height:30px;
+}
+.iparent{
+    display: flex;
+}
+#i1{
+    position: absolute;
+    top:8%;
+    left: 10%;
+    width: 80%;
+   
+    height: 8%;
+}
+#i2{
+    position: absolute;
+    top:20%;
+    left: 10%;
+    width: 80%;
+        height: 8%;
+}
+#i3{
+    position: absolute;
+    top:32%;
+    left: 10%;
+    width: 80%;
+    
+    height: 8%;
+}
+#i4{
+    position: absolute;
+    top:44%;
+    left: 10%;
+    width: 80%;
+    
+    height: 8%;
+}
+#i5{
+    position: absolute;
+    top:56%;
+    left: 10%;
+    width: 80%;
+        height: 8%;
+}
+#i6{
+    position: absolute;
+    top:68%;
+    left:10%;
+    width: 60%;
+    
+    height: 8%;
+}
+#i7{
+    position: absolute;
+    top:68%;
+    left: 71%;
+    width: 20%;
+    
+    height: 8%;
+}
+#i8{
+    position: absolute;
+    top:80%;
+    left: 10%;
+    width: 80%;
+    height: 8%;
+}
+#i9{
+    position: absolute;
+    top:91%;
+    width: 15%;
+}
+#i10{
+    position: absolute;
+    top:91%;
+    left: 30%;
+}
+.cart{
+    width: 85%;
+    height: 13%;
+    margin-left: 8%; 
+    background: white; 
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+    margin-top: 4%;
+    cursor: pointer;
+}
+.dealer_carts{
+    position:absolute;
+    top:350%;
+    width: 23%;
+    height: 1500%;
+    background: white; 
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#name_tag{
+    position: absolute;
+    margin-top:4%;
+    margin-left:14%;
+    font-weight: bold;     
+}
+#name_value{
+    position: absolute;
+    margin-top:4%;
+    margin-left:42%;
+}
+#dealer_tag{
+    position:absolute;
+    margin-top:15%;
+    margin-left:5%;
+    font-weight: bold; 
+}
+#dealer_value{
+    position: absolute;
+    margin-top:15%;
+    margin-left:42%;
+}
+.dealer_carts_details{
+    position:absolute;
+    top:450%;
+    left: 27%;
+    width: 42%;
+    height: 1300%;
+    background:white; 
+    box-shadow: 0 0 2px rgba(0,0,0,.3);
+}
+.selected{
+    background-color: aquamarine;
+}
+#tag1{
+    position: absolute;
+    left: 30%;
+    color: white;
+}
+.tag_parent1{
+    display: flex;
+}
+#tag2{
+    font-weight:bold;
+    position: absolute;
+    top:18%;
+    left: 10%;
+    font-size: 130%;
+
+}
+#tag21{
+    position: absolute;
+    top:18%;
+    left: 40%;
+    font-size: 120%;
+
+}
+.tag_parent2{
+display: flex;
+}
+#tag3{
+    font-weight:bold;
+    position: absolute;
+    top:26%;
+    left: 3%;
+    font-size: 130%;
+}
+#tag31{
+    position: absolute;
+    top:26%;
+    left: 40%;
+    font-size: 120%;
+}
+.header_data{
+    background-color: #d14c4d;
+    width: 100%;
+    height: 15%;
+}
+.tag_parent3{
+    display: flex;
+}
+#tag4{
+    font-weight:bold;
+    position: absolute;
+    top:34%;
+    left: 3%;
+    font-size: 130%;
+
+}
+#tag41{
+    position: absolute;
+    top:34%;
+    left: 40%;
+    font-size: 120%;
+}
+.tag_parent4{
+    display: flex;
+}
+#tag5{
+    font-weight:bold;
+    position: absolute;
+    top:42%;
+    left: 13%;
+    font-size: 130%;
+
+}
+#tag51{
+    position: absolute;
+    top:42%;
+    left: 40%;
+    font-size: 120%;
+
+}
+.tag_parent5{
+    display: flex;
+}
+#tag6{
+    font-weight:bold;
+    position: absolute;
+    top:50%;
+    left: 5%;
+    font-size: 130%;
+
+}
+#tag61{
+    position: absolute;
+    top:50%;
+    left: 40%;
+    font-size: 120%;
+}
+.tag_parent6{
+    display: flex;
+}
+#tag7{
+    font-weight:bold;
+    position: absolute;
+    top:58%;
+    left: 4%;
+    font-size: 130%;
+
+}
+#tag71{
+    position: absolute;
+    top:58%;
+    left: 40%;
+    font-size: 120%;
+}
+#tag72{
+    position: absolute;
+    top:58%;
+    left: 47%;
+    font-size: 120%;
+}
+.tag_parent7{
+    display: flex;
+}
+#tag8{
+    font-weight:bold;
+    position: absolute;
+    top:66%;
+    left: 6%;
+    font-size: 130%;
+
+}
+#tag81{
+    position: absolute;
+    top:66%;
+    left: 40%;
+    font-size: 120%;
+}
+#delete{
+    width: 120px;
+    color: white;
+    background-color: #7e0200;
+    position: absolute;
+    top:75%;
+    right: 10%;
+}

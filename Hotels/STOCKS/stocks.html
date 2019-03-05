@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+     <!-- Bootstrap 4 CDN -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+     <!-- Css External File Include -->
+    <link rel="stylesheet" href="css/stocks.css"> 
+    <!-- JS File -->
+  <script src="JS/main.js"></script>
+</head>
+<body>
+    
+      <!-- Main Divison -->
+      <div class="col-lg-12 body">
+        <!-- Top Search Bar -->
+            <div class="top" style="height: 34px;">
+                    <div class="content">
+                        <img src="icon/SEARCH.PNG" alt="" id="search_icon">
+                        <input type="search" name="" id="search_bar" placeholder="Search invoice, Bill number" style="width: 902px;height: 22px;margin-top: 4px;">
+                    </div>
+                    <div class="user">
+                        <select name="position" id="manager">
+                            <option value="manager">Manager</option>
+                        </select>
+                    </div>
+                </div>
+       
+                 <div class="add">
+                         <div><input type="image" src="ICON/PLUS.PNG" width="30" id="ad" height="30" data-toggle="modal" data-target="#myModal"></div>                 
+                    <div><p id="t1" data-toggle="modal" data-target="#myModal">Add Dealers here...</p></div>
+                    <!-- The Modal -->
+                    <div class="modal " id="myModal">
+                            <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h4 class="modal-title" id="myModalLabel">Add Dealers</h4>
+                                      </div>
+                                      <div class="modal-body">
+                                        <form name="add_dealer" class="text-center" style="color: #757575;" method="POST" action="PHP/add_dealer.php">
+                                            <div><input type="text" value="" id="i1" class="form form-control" placeholder="Dealer Name" name="d_name" required></div>  
+                                            <div><input type="text" value="" id="i2" class="form form-control" placeholder="Contact Number" name="d_contact" required pattern="[6-9]{1}[0-9]{9}"></div>   
+                                            <div><input type="text" value="" id="i3" class="form form-control" placeholder="Dealer-Category" name="d_category" ></div>  
+                                            <div><input type="text" value="" id="i4" class="form form-control" placeholder="Nick Name" name="d_nick" ></div> 
+                                            <div><input type="text" value="" id="i5" class="form form-control" placeholder="Dealer-Address" name="d_address" ></div>   
+                                            <div><div class="iparent">   <div><input type="text" value="" id="i6" class="form form-control" placeholder="Dealer-Purchase" name="d_purchase" required ></div>
+                                            <div><select id="i7" name="d_size" class="form form-control"><option value="kgs">Kgs</option>
+                                            <option value="packet">pack</option>
+                                            <option value="liters">lit</option></select></div>
+                                          </div></div> 
+                                             <div><input type="text" value="" id="i8" class="form form-control" placeholder="Dealer-Amount" name="d_amount" required ></div>                                          
+                                            <div> <button type="button" class="btn btn-warning" id="i10" data-dismiss="modal">Cancel</button><input type="submit" class="btn btn-dark"  value="Add"  id="i9" ></div> 
+                                                 
+                                             </form>
+                                            
+                                      </div>
+                                      
+                                    </div>
+                                  </div>
+                          </div> 
+               <!-- Cart -->
+                 <div class="dealer_carts">
+                <!-- <div class="cart">
+                  <div><p id="name_tag">Name:</p><p id="name_value">Mari</p></div>
+                  <div><p id="dealer_tag">Category:</p><p id="dealer_value">Chicken Dealer</p></div>
+                </div>
+                
+                  -->
+                   
+              </div>
+             
+              
+              
+              <!-- Cart Details -->
+             
+              <div class="dealer_carts_details">
+               <div class="de"> 
+               <div class="header_data"> <h3 id="tag1">Dealers Deatils</h3></div>
+                <div class="tag_parent1"><div><p id="tag2">Dealer Name: </p></div><div><p id="tag21">Marimuthu</p></div> </div>
+                <div class="tag_parent2"><div><p id="tag3">Contact Number: </p></div><div><p id="tag31">8144225411</p></div> </div>
+                <div class="tag_parent3"><div><p id="tag4">Dealer Category: </p></div><div><p id="tag41">Vegtable</p></div> </div>
+                <div class="tag_parent4"><div><p id="tag5">Nick Name: </p></div><div><p id="tag51">Vegtable Boy</p></div> </div>
+                <div class="tag_parent5"><div><p id="tag6">Dealer Address: </p></div><div><p id="tag61">70/8w,chekkadi street,Cumbum</p></div> </div>
+                <div class="tag_parent6"><div><p id="tag7">Dealer Purchase: </p></div><div><p id="tag71">100</p></div><div><p id="tag72">Kgs</p></div> </div>
+                <div class="tag_parent7"><div><p id="tag8">Dealer Amount: </p></div><div><p id="tag81">70000</p></div> </div>
+                <button id="delete" class="btn">Remove User</button>
+              </div></div>
+
+
+                </div>
+               
+               
+                 <div class="items">
+
+                  <div class="at"><center><p id="ai">Available Stocks</p></center></div>
+                  <table class="table">
+                      <thead>
+                          <tr><th id="tt">Items</th><th id="ttt">Stocks</th><th></th></tr>
+                      </thead>
+                      <tbody>
+                          <tr><td id="tt1">Oil</td> <td id="tt2">150 ltr</td><td id="tt3"><img src="icon/bag.png" width="15px" height="15px"></td></tr>
+                          <tr><td id="tt1">Oil</td> <td id="tt2">150 ltr</td><td id="tt3"><img src="icon/bag.png" width="15px" height="15px"></td></tr>
+                          <tr><td id="tt1">Oil</td> <td id="tt2">150 ltr</td><td id="tt3"><img src="icon/bag.png" width="15px" height="15px"></td></tr>
+                          <tr><td id="tt1">Oil</td> <td id="tt2">150 ltr</td><td id="tt3"><img src="icon/bag.png" width="15px" height="15px"></td></tr>
+                          <tr><td id="tt1">Oil</td> <td id="tt2">150 ltr</td><td id="tt3"><img src="icon/bag.png" width="15px" height="15px"></td></tr>
+                          <tr><td id="tt1">Oil</td> <td id="tt2">150 ltr</td><td id="tt3"><img src="icon/bag.png" width="15px" height="15px"></td></tr>
+                          
+                         </tbody>
+                  </table>
+
+
+                </div> 
+            </div>
+   
+                
+
+
+
+     
+   </div> 
+</body>
+</html>
